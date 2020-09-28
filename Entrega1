@@ -78,4 +78,4 @@ def ver_reticulado_2d(ret, fig=0,
 		plt.show()  
           
 print(__str__(self))  
-print(ver_reticulado_2d(ret)  
+print(ver_reticulado_2d(ret))  
