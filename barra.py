@@ -21,24 +21,44 @@ class Barra(object):
 		return 
 
 	def calcular_area(self):
-		"""Implementar"""
-		return 
+		try:
+			return self.A
+		except:
+			self.A = np.pi*(2*self.R*self.t - self.t**2)
+			return self.A
 
 	def calcular_largo(self, reticulado):
 		"""Devuelve el largo de la barra. 
 		xi : Arreglo numpy de dimenson (3,) con coordenadas del nodo i
 		xj : Arreglo numpy de dimenson (3,) con coordenadas del nodo j
 		"""
-		"""Implementar"""
-		return 
+		try:
+			return self.L
+		except:
+			xi = reticulado.xyz[self.ni]
+			xj = reticulado.xyz[self.nj]
+			self.L = np.sqrt( (xi[0]-xj[0])**2 + (xi[1]-xj[1])**2 + (xi[2]-xj[2])**2 )
+			return self.L
 
 	def calcular_peso(self, reticulado):
-		"""Devuelve el largo de la barra. 
+		"""Devuelve el peso de la barra. 
 		xi : Arreglo numpy de dimenson (3,) con coordenadas del nodo i
 		xj : Arreglo numpy de dimenson (3,) con coordenadas del nodo j
 		"""
-		"""Implementar"""
-		return 
+		try:
+			return self.M
+		except:
+			try:
+				A = self.A
+			except:
+				A = Barra.calcular_area(self)
+			try:
+				L = self.L
+			except:
+				L = Barra.calcular_largo(self,reticulado)
+			
+			self.M = A*L*self.ρ
+			return self.M
 
 
 
