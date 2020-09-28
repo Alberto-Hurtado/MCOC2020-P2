@@ -13,7 +13,6 @@ class Reticulado(object):
 		self.restricciones = {}
 
 	def agregar_nodo(self, x, y, z=0):
-		"""Implementar"""
 		#Cambiar Tamaño
 		self.xyz.resize((self.Nnodos+1,3))
 		self.xyz[self.Nnodos,:] = [x,y,z]
@@ -21,31 +20,31 @@ class Reticulado(object):
 		return
 		
 	def agregar_barra(self, barra):
-		"""Implementar"""
-		return
+		self.barras.append(barra)
+		return None
 
 	def obtener_coordenada_nodal(self, n): 
-		"""Implementar"""
-		return 
+		return self.xyz[n]
 
 	def calcular_peso_total(self):
 		peso=0
 		for barra in self.barras:
-			print(barra.calcular_peso(self))
 			peso += barra.calcular_peso(self)
 		return peso
 
 	def obtener_nodos(self):
-		"""Implementar"""
-		return 
+		return self.xyz
 
 	def obtener_barras(self):
-		"""Implementar"""
-		return 
+		return self.barras
 
 	def agregar_restriccion(self, nodo, gdl, valor=0.0):
 		"""Implementar"""
-		return
+		if nodo in self.restricciones:
+			self.restricciones[nodo].append([gdl,valor])
+		else:
+			self.restricciones[nodo] = [[gdl,valor]]
+		pass
 
 	def agregar_fuerza(self, nodo, gdl, valor):
 		"""Implementar"""
@@ -68,4 +67,3 @@ class Reticulado(object):
 		s += "Mis nodos son:\n"
 		s += f"{self.xyz}"
 		return s
-

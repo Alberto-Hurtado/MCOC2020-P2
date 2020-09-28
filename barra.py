@@ -17,8 +17,7 @@ class Barra(object):
 		self.σy = σy
 
 	def obtener_conectividad(self):
-		"""Implementar"""
-		return 
+		return [self.ni,self.nj]
 
 	def calcular_area(self):
 		try:
@@ -51,13 +50,13 @@ class Barra(object):
 			try:
 				A = self.A
 			except:
-				A = Barra.calcular_area(self)
+				A = self.calcular_area()
 			try:
 				L = self.L
 			except:
-				L = Barra.calcular_largo(self,reticulado)
+				L = self.calcular_largo(reticulado)
 			
-			self.M = A*L*self.ρ
+			self.M = A*L*g*self.ρ
 			return self.M
 
 

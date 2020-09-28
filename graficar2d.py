@@ -69,7 +69,7 @@ def ver_reticulado_2d(ret, fig=0,
 				)
 			if ver_numeros_de_barras:
 				x0 = x.mean()
-				y0 = y.mean()
+				y0 = y.mean()*1.1
 				plt.text(x0, y0, f"{i}", color=color_barras)
 
 	
