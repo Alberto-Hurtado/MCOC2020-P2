@@ -26,6 +26,7 @@ class Barra(object):
 			self.A = np.pi*(2*self.R*self.t - self.t**2)
 			return self.A
 
+
 	def calcular_largo(self, reticulado):
 		"""Devuelve el largo de la barra. 
 		xi : Arreglo numpy de dimenson (3,) con coordenadas del nodo i
