@@ -14,6 +14,15 @@ m = 1.0
 #Inicializar modelo
 ret = Reticulado()
 
+<<<<<<< HEAD
+
+#Nodos
+ret.agregar_nodo(0,0)
+ret.agregar_nodo(1,0)
+ret.agregar_nodo(1,1)
+
+print(ret)
+=======
 #Nodos
 ret.agregar_nodo(0,0)
 ret.agregar_nodo(1,0)
@@ -21,6 +30,7 @@ ret.agregar_nodo(1,1)
 
 print(ret)
 
+>>>>>>> 548cfa4019e4b5a252af9f401d1119c571bb844d
 
 #Barras
 b1 = Barra(0, 1, 20*cm, 4*mm, 200*GPa, 7600*kg/m**3, 420*MPa)

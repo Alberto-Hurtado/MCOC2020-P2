@@ -33,7 +33,13 @@ class Reticulado(object):
 		return peso
 
 	def obtener_nodos(self):
+<<<<<<< HEAD
+		"""Implementar"""
+
+		return 
+=======
 		return self.xyz
+>>>>>>> 548cfa4019e4b5a252af9f401d1119c571bb844d
 
 	def obtener_barras(self):
 		return self.barras
@@ -64,6 +70,13 @@ class Reticulado(object):
 
 	def __str__(self):
 		s = "Hola soy un reticulado!\n"
+<<<<<<< HEAD
+		s += "mis nodos son:"
+		s += f"{self.xyz}"
+		return s
+
+=======
 		s += "Mis nodos son:\n"
 		s += f"{self.xyz}"
 		return s
+>>>>>>> 548cfa4019e4b5a252af9f401d1119c571bb844d
